@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.Wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  width: 900px;
+  height: 400px;
+/* padding: 25px; */
+}
+
+.Wrapper-element {
+  background-color: #61dafb;
+  margin: 10px;
+  text-align: center;
+}
