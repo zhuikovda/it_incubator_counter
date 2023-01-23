@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { UniversalButton } from "../UniversalButton/UniversalButton";
 
-export const Counter = () => {
-    const [number, setNumber] = useState<number>(0);
+type CounterPropsType = {
+    maxValue: number;
+    minValue: number;
+    number: number;
+    error: string;
+    incNumberHandler: () => void;
+    resetNumberHandler: () => void;
+};
 
-    const maxValue = 5,
-          minValue = 0;
-
-    const incNumberHandler = () => {
-        if (number < maxValue) {
-            setNumber(number + 1);
-        }
-    };
-
-    const resetNumberHandler = () => {
-        setNumber(minValue);
-    };
-
-    let disabledValue = number === minValue ? true : false
+export const Counter: FC<CounterPropsType> = (props) => {
+    let disabledValue = props.number === props.minValue || props.error ? true : false;
+    let disabledInc = props.error ? true : false;
+    let message = props.error || props.number;
 
     return (
         <div>
-            <div>{number}</div>
-            <UniversalButton title={"inc"} callBack={incNumberHandler} disabled={false} />
-            <UniversalButton title={"reset"} callBack={resetNumberHandler} disabled={disabledValue} />
+            <div>{message}</div>
+            <UniversalButton
+                title={"inc"}
+                callBack={props.incNumberHandler}
+                disabled={disabledInc}
+            />
+            <UniversalButton
+                title={"reset"}
+                callBack={props.resetNumberHandler}
+                disabled={disabledValue}
+            />
         </div>
     );
 };
