@@ -1,0 +1,16 @@
+.Input-Wrapper {
+    /* background-color: aqua; */
+    margin: 10px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.Button-Wrapper {
+    margin: 10px;
+    height: 140px;
+    border: 2px solid black;
+}
+
+.Input-Container {
+    margin-top: 15%;
+}

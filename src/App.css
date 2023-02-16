@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #4a666d;
 }
 
 @keyframes App-logo-spin {
@@ -42,11 +42,13 @@
   grid-template-columns: repeat(2, 50%);
   width: 900px;
   height: 400px;
+  background: rgb(171, 181, 181);
 /* padding: 25px; */
 }
 
 .Wrapper-element {
-  background-color: #61dafb;
+  background-color: #51656a;
   margin: 10px;
   text-align: center;
+  border: 2px solid rgb(201, 204, 27);
 }

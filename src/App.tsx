@@ -24,10 +24,6 @@ function App() {
     }, [number]);
 
     const addNumber = (maxValue: number, minValue: number) => {
-        
-        // setMaxValue(0);
-        //     setMinValue(0);
-        //     setNumber(0);
         if (maxValue === 0 && minValue === 0) {
             setError("enter values and press 'set'");
             setNumber(0)
